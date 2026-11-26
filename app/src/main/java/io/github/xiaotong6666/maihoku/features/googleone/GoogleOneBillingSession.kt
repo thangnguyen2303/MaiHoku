@@ -342,7 +342,7 @@ internal class GoogleOneBillingSession(activity: Activity) {
         activityRef.clear()
     }
 
-    private companion object {
+private companion object {
         const val TAG = "GoogleOneBilling"
 
         /**
@@ -350,7 +350,7 @@ internal class GoogleOneBillingSession(activity: Activity) {
          * 首期折扣/试用 SKU。Play 只会返回当前账号实际可见的部分，查询侧不再裁剪。
          */
         val PRODUCT_IDS = listOf(
-            // 基础档位
+            // 基础档位 (Gói cơ bản)
             "g1.play.20tb",
             "g1.play.ai.pro",
             "g1.30tb",
@@ -359,24 +359,60 @@ internal class GoogleOneBillingSession(activity: Activity) {
             "g1.2tb.subs_variant",
             "g1.2tb.6months_eft",
             "g1.play.helium",
-            // 附加项
+
+            // 附加项 (Gói đính kèm YouTube)
             "g1.youtube_premium_individual_add_on",
             "g1.youtube_premium_family_add_on",
             "g1.youtube_premium_lite_add_on",
-            // 首期折扣 / 试用
-            "g1.helium.3months_ip_75p.acq",
-            "g1.2tb.3months_ip_85p.acq",
+
+            // Google AI Pro (5 TB) — 用 thử miễn phí & Giảm giá (Ảnh 1)
+            "g1.2tb.ai.18months_eft",
+            "g1.2tb.ai.15months_eft",
+            "g1.2tb.ai.12months_eft",
+            "g1.play.2tb.ai.student",
+            "g1.2tb.ai.6months_eft",
+            "g1.2tb.ai.4months_eft",
+            "g1.2tb.ai.3months_eft",
+            "g1.2tb.ai.2months_eft",
+            "g1.2tb.ai.12months_ip_90p",
+            "g1.2tb.ai.12months_ip_75p",
+            "g1.2tb.ai.3months_ip_90p.acq",
             "g1.2tb.ai.3months_ip_75p.acq",
-            "g1.10tb.1month_ip_90p",
-            "g1.10tb.3months_ip_85p",
+            "g1.2tb.ai.2months_ip_90p.acq",
+            "g1.2tb.ai.1month_ip_95p.acq",
+
+            // Google AI Ultra (20 TB / 30 TB) — 用 thử miễn phí & Giảm giá (Ảnh 2)
+            "g1.20tb.1month_eft.acq",
             "g1.20tb.3months_ip_90p.acq",
             "g1.20tb.3months_ip_80p.acq",
+            "g1.20tb.3months_ip_80p",
             "g1.20tb.3months_ip_75p.acq",
+            "g1.ai.ultra.1month_eft.acq",
             "g1.ai.ultra.1month_ip_90p.acq",
             "g1.ai.ultra.3months_ip_90p.acq",
             "g1.ai.ultra.3months_ip_80p.acq",
             "g1.ai.ultra.1month_ip_75p.acq",
             "g1.ai.ultra.3months_ip_75p.acq",
+
+            // Google AI Plus (2 TB / 400 GB) & Lưu trữ cơ bản 30GB-200GB (Ảnh 2)
+            "g1.2tb.1year_eft",
+            "g1.2tb.3months_ip_90p.acq",
+            "g1.2tb.3months_ip_85p.acq",
+            "g1.play.helium.student",
+            "g1.helium.12months_ip_90p",
+            "g1.helium.3months_ip_75p.acq",
+            "g1.100gb.1year_eft",
+            "g1.100gb.annual.1year_eft",
+            "g1.100gb.9months_eft",
+            "g1.100gb.180days_eft",
+            "g1.200gb.1year_eft",
+            "g1.200gb.180days_eft",
+            "g1.30gb.3month_eft",
+            "g1.30gb.1month_eft",
+
+            // Các gói 10TB cũ
+            "g1.10tb.1month_ip_90p",
+            "g1.10tb.3months_ip_85p",
         )
     }
-}
+ }
